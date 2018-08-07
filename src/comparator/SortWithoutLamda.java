@@ -25,6 +25,16 @@ public class SortWithoutLamda {
 			
 		});
 		
+		// sort by name
+		Collections.sort(deverlopers, new Comparator<Deverloper>() {
+
+			@Override
+			public int compare(Deverloper o1, Deverloper o2) {
+				return o1.getName().compareTo(o2.getName());
+			}
+			
+		});
+		
 		System.out.println("After sort");
 		for (Deverloper d : deverlopers) {
 			System.out.println(d);
